@@ -24,7 +24,7 @@ data "aws_s3_bucket_object" "jar_hash" {
 }
 
 resource "aws_lambda_function" "test_lambda" {
-  function_name = "Madhav-da"
+  function_name = "lambda-Madhav"
   s3_bucket        = var.deployment_bucket_name
   s3_key = "${var.deployment_path_key}/${var.deployment_package_name}.zip"
   role          = aws_iam_role.iam_for_lambda.arn
